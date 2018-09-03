@@ -30,7 +30,7 @@ class App extends React.Component {
 
   vote = () => {
     this.setState((prevState) => {
-      const voteCopy = {...prevState.votes}
+      const voteCopy = [...prevState.votes]
       voteCopy[prevState.selected]++
       return ({ votes: voteCopy })
     })
